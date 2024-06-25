@@ -18,7 +18,8 @@ CREATE TABLE `student` (
 );
 
 INSERT INTO `student` (`first_name`, `last_name`, `birthdate`, `gender`, `grade`, `username`, `email`, `password`) 
-VALUES ('Jhon', 'Paul', '1999-07-12', 'm', '3.96', 'pj', 'path12@gmail.com', '1234eerrty');
+VALUES ('Mahesh Syam Kumar', 'Kondapalli', '2004-09-12', 'm', '7.43', 'MaheshSyam_K', 'maheshlondapalli5@gmail.com', 'Mahesh@1527');
+
 
 INSERT INTO `student` (`first_name`, `last_name`, `birthdate`, `gender`, `grade`, `username`, `email`, `password`) 
 VALUES ('Fate', 'Nasir', '1990-08-03', 'f', '3.7', 'fate12', 'fatenasir@gmail.com', 'fate1234');
@@ -42,6 +43,9 @@ VALUES ('Netsanet', 'Endale', 'f', 'netsi', 'netsanetendale@gmail.com', '1234net
 INSERT INTO `admin` (`first_name`, `last_name`, `gender`, `username`, `email`, `password`) 
 VALUES ('Kemal', 'Abdu', 'm', 'keme', 'kemalabdu@gmail.com', '1234567890');
 
+INSERT INTO `admin` (`first_name`, `last_name`, `gender`, `username`, `email`, `password`) 
+VALUES ('Mahesh Syam Kumar', 'Kondapalli', 'm', 'MaheshSyam_K', 'maheshkondapalli5@gmail.com', 'Mahesh@1527');
+
 CREATE TABLE `books` (
     `book_id` INT AUTO_INCREMENT PRIMARY KEY,
     `title` VARCHAR(255),
@@ -56,7 +60,8 @@ VALUES ('Introduction to the Theory of Computation', 'Michael Sipser', '2012-02-
 
 INSERT INTO `books` (`title`, `author`, `publication_date`, `department`, `status`) 
 VALUES ('Code Complete: A Practical Handbook of Software Construction', 'Steve McConnell', '2004-06-09', 'Software_Engineering', 'Available');
-INSERT INTO `books` VALUES    (3, 'The Mythical Man-Month: Essays on Software Engineering', 'Frederick P. Brooks Jr.', '1995-08-12', 'Software_Engineering', 'Available');
+INSERT INTO `books` (`book_id`,`title`, `author`, `publication_date`, `department`, `status`) 
+ VALUES    (3, 'The Mythical Man-Month: Essays on Software Engineering', 'Frederick P. Brooks Jr.', '1995-08-12', 'Software_Engineering', 'Available');
 INSERT INTO `books` VALUES    (4, 'Refactoring: Improving the Design of Existing Code', 'Martin Fowler', '1999-07-08', 'Software_Engineering', 'Available');
 INSERT INTO `books` VALUES    (5, 'Structure and Interpretation of Computer Programs', 'Harold Abelson, Gerald Jay Sussman, Julie Sussman', '1996-07-15', 'Software_Engineering', 'Available');
 INSERT INTO `books` VALUES    (6, 'The Art of Computer Programming', 'Donald E. Knuth', '1968-07-01', 'Software_Engineering', 'Available');
@@ -175,5 +180,3 @@ INSERT INTO `books` VALUES(92, 'Structural Geology', 'Haakon Fossen', '2015-12-1
    INSERT INTO `books` VALUES (119, 'Basic Biotechnology', 'Colin Ratledge, Bjorn Kristiansen', '2013-05-14', 'Biotechnology', 'Available');
    INSERT INTO `books` VALUES (120, 'Biotechnology: Academic Cell Update Edition', 'David P. Clark, Nanette J. Pazdernik', '2019-05-15', 'Biotechnology', 'Available');
 
-
-  
