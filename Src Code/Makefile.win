@@ -1,0 +1,49 @@
+# Project: LMS
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = Main.o welcome_page.o console_functions.o aboutUs.o homePage.o login_reg_page.o student_functions.o admin_functions.o
+LINKOBJ  = Main.o welcome_page.o console_functions.o aboutUs.o homePage.o login_reg_page.o student_functions.o admin_functions.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"C:/Program Files/MySQL/MySQL Server 8.0/lib" -lmysql -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files/MySQL/MySQL Server 8.0/include" -I"C:/Program Files/MySQL/MySQL Server 8.0/include/mysql"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"C:/Program Files/MySQL/MySQL Server 8.0/include" -I"C:/Program Files/MySQL/MySQL Server 8.0/include/mysql"
+BIN      = LMS.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+welcome_page.o: welcome_page.cpp
+	$(CPP) -c welcome_page.cpp -o welcome_page.o $(CXXFLAGS)
+
+console_functions.o: console_functions.cpp
+	$(CPP) -c console_functions.cpp -o console_functions.o $(CXXFLAGS)
+
+aboutUs.o: aboutUs.cpp
+	$(CPP) -c aboutUs.cpp -o aboutUs.o $(CXXFLAGS)
+
+homePage.o: homePage.cpp
+	$(CPP) -c homePage.cpp -o homePage.o $(CXXFLAGS)
+
+login_reg_page.o: login_reg_page.cpp
+	$(CPP) -c login_reg_page.cpp -o login_reg_page.o $(CXXFLAGS)
+
+student_functions.o: student_functions.cpp
+	$(CPP) -c student_functions.cpp -o student_functions.o $(CXXFLAGS)
+
+admin_functions.o: admin_functions.cpp
+	$(CPP) -c admin_functions.cpp -o admin_functions.o $(CXXFLAGS)
